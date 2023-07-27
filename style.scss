@@ -61,7 +61,41 @@ a {
     left: 50%;
     transform: translate(-50%,-50%);
   }
+}
+#loading {
+  width: 80px;
+  path {
+    fill-opacity: 0;
+    fill: none;
+    stroke: var(--gray1);
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-width: 10px;
+    transform-origin: center top;
+  }
+  .done {
+    #path1 {
+      animation: loadinganime1 1200ms;
+      animation-fill-mode: forwards;
 
+    }
+    #path2,#path3 {
+      animation: loadinganime2 1200ms;
+      animation-fill-mode: forwards;
+      transform: translateX(-9px);
+    }
+  }
+}
+@keyframes loadinganime1 {
+  100% {
+    stroke-width: 15px;
+    scale: 0.7;
+  }
+}
+@keyframes loadinganime2 {
+  100% {
+    transform: translateY(-110px);
+  }
 }
 /* header---------------------------- */
 header {
@@ -790,40 +824,3 @@ footer {
     }
   }
 }
-/* ローディング---------------------------- */
-#loading {
-  width: 80px;
-  path {
-    fill-opacity: 0;
-    fill: none;
-    stroke: var(--gray1);
-    stroke-linejoin: round;
-    stroke-linecap: round;
-    stroke-width: 10px;
-    transform-origin: center top;
-  }
-  .done {
-    #path1 {
-      animation: loadinganime1 1200ms;
-      animation-fill-mode: forwards;
-
-    }
-    #path2,#path3 {
-      animation: loadinganime2 1200ms;
-      animation-fill-mode: forwards;
-
-    }
-  }
-}
-@keyframes loadinganime1 {
-  100% {
-    stroke-width: 15px;
-    scale: 0.7;
-  }
-}
-@keyframes loadinganime2 {
-  100% {
-    transform: translate(-9px,-110px);
-  }
-}
-
