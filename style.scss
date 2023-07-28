@@ -45,6 +45,9 @@ a {
 .eb {
   font-family: var(--eb);
 }
+.pc-only {
+  display: none;
+}
 
 /* loading---------------------------- */
 .loading {
@@ -61,8 +64,42 @@ a {
     left: 50%;
     transform: translate(-50%,-50%);
   }
-
 }
+#loading {
+  width: 80px;
+  path {
+    fill-opacity: 0;
+    fill: none;
+    stroke: var(--gray1);
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-width: 10px;
+    transform-origin: center top;
+  }
+  .done {
+    #path1 {
+      animation: loadinganime1 1200ms;
+      animation-fill-mode: forwards;
+    }
+    #path2,#path3 {
+      animation: loadinganime2 1200ms;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+@keyframes loadinganime1 {
+  100% {
+    stroke-width: 15px;
+    scale: 0.7;
+  }
+}
+@keyframes loadinganime2 {
+  100% {
+    transform: translate(0px,-110px);
+  }
+}
+
+
 /* header---------------------------- */
 header {
   position: relative;
@@ -481,6 +518,7 @@ header {
     height: 1170px;
     border: 2px solid var(--navy);
     transform-origin: center top;
+    display: none;
   }
   &::after {
     content: "";
@@ -531,12 +569,22 @@ header {
     text-align: left;
     margin: 0 auto;
     display: inline-block;
+    .howto-text-wrapper {
+      display: flex;
+      margin: 0 auto;
+    }
+    img {
+      width: 25px;
+      object-fit: contain;
+      margin-right: 10px;
+      margin-left: 30px;
+    }
     p {
       text-align: left;
-      &:nth-of-type(2) {
-        font-size: 14px;
-        margin-top: 52px;
-      }
+    }
+    .howto-last {
+      font-size: 14px;
+      margin-top: 52px;
     }
   }
 }
@@ -790,39 +838,3 @@ footer {
     }
   }
 }
-/* ローディング---------------------------- */
-#loading {
-  width: 80px;
-  path {
-    fill-opacity: 0;
-    fill: none;
-    stroke: var(--gray1);
-    stroke-linejoin: round;
-    stroke-linecap: round;
-    stroke-width: 10px;
-    transform-origin: center top;
-  }
-  .done {
-    #path1 {
-      animation: loadinganime1 1200ms;
-      animation-fill-mode: forwards;
-
-    }
-    #path2,#path3 {
-      animation: loadinganime2 1200ms;
-      animation-fill-mode: forwards;
-    }
-  }
-}
-@keyframes loadinganime1 {
-  100% {
-    stroke-width: 15px;
-    scale: 0.7;
-  }
-}
-@keyframes loadinganime2 {
-  100% {
-    transform: translate(0px,-110px);
-  }
-}
-

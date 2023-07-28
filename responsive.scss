@@ -26,6 +26,9 @@
     .pc-br {
         display: block;
     }
+    .pc-only {
+        display: block;
+    }
     /* header------------------------------------ */
     header {
         h1 {
@@ -279,6 +282,14 @@
         }
     }
 }
+@media (min-width: 385px) {
+    .howto {
+        .howto-frame {
+            display: block;
+        }
+    }
+}
+
 @media (min-width: 1130px) {
     .howto {
         .howto-frame {
@@ -319,12 +330,13 @@
         .howto-text {
             margin: 0 0 0 100px;
             font-size: 20px;
-            p {
-                &:nth-of-type(2) {
-                  font-size: 16px;
-                  margin-top: 130px;
-                }
-              }
+            img {
+                margin-left: 0px;
+            }
+            .howto-last {
+                font-size: 16px;
+                margin-top: 130px;
+            }
         }
     }
 }

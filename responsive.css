@@ -25,6 +25,9 @@
   .pc-br {
     display: block;
   }
+  .pc-only {
+    display: block;
+  }
   /* header------------------------------------ */
   header h1 {
     margin: 46px 0 0 110px;
@@ -263,6 +266,11 @@
     height: 1120px;
   }
 }
+@media (min-width: 385px) {
+  .howto .howto-frame {
+    display: block;
+  }
+}
 @media (min-width: 1130px) {
   .howto {
     padding: 140px 0 110px 0;
@@ -305,7 +313,10 @@
     margin: 0 0 0 100px;
     font-size: 20px;
   }
-  .howto .howto-text p:nth-of-type(2) {
+  .howto .howto-text img {
+    margin-left: 0px;
+  }
+  .howto .howto-text .howto-last {
     font-size: 16px;
     margin-top: 130px;
   }
