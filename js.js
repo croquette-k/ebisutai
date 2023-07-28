@@ -15,11 +15,18 @@ $(function(){
     }
     );
 
-    $(window).on('load',function(){
-        $(".loading").delay(2000).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェイドアウト
-        $(".loading-anime").delay(2000).fadeOut('slow');//ロゴを1.5秒（1500ms）待機してからフェイドアウト
-            stroke.play();//SVGアニメーションの実行
-    });
+    stroke.play();//SVGアニメーションの実行
+
+});
+
+
+$(window).on('load',function(){
+    $(".loading").delay(1000).fadeOut('slow');//ローディング画面を1秒待機してからフェイドアウト
+    $(".loading-anime").delay(1000).fadeOut('slow');//ロゴを1秒待機してからフェイドアウト
+});
+
+    $(function(){
+
     
     /* ハンバーガーメニュー */
     $(".openbtn").click(function () {//ボタンがクリックされたら
