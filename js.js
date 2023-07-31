@@ -15,6 +15,8 @@ $(function(){
     }
     );
 
+    $('.loading-anime').show();
+
     stroke.play();//SVGアニメーションの実行
 
 });
@@ -25,7 +27,7 @@ $(window).on('load',function(){
     $(".loading-anime").delay(1000).fadeOut('slow');//ロゴを1秒待機してからフェイドアウト
 });
 
-    $(function(){
+$(function(){
 
     
     /* ハンバーガーメニュー */

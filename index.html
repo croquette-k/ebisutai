@@ -10,8 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Shippori+Mincho:wght@500&display=swap" rel="stylesheet">
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- 自作CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
@@ -103,7 +101,10 @@
               <div class="feature-number">01</div>
             </div>
             <div class="feature-box">
-              <img src="img/features1.webp" alt="" class="feature-img">
+              <picture>
+                <source srcset="img/features1.webp" media="(min-width: 500px)" type="image/webp" class="feature-img">
+                <img src="img/features1-sp.webp" alt="" class="feature-img">
+              </picture>    
               <div class="feature-text">
                 <h3 class="feature-title"><span class="rect"></span><span class="label">いつも綺麗な結び目を</span></h3>
                 <p class="feature-body">
@@ -118,7 +119,10 @@
               <div class="feature-number">02</div>
             </div>
             <div class="feature-box">
-              <img src="img/features2.webp" alt="" class="feature-img">
+              <picture>
+                <source srcset="img/features2.webp" media="(min-width: 500px)" type="image/webp" class="feature-img">
+                <img src="img/features2-sp.webp" alt="" class="feature-img">
+              </picture>    
               <div class="feature-text">
                 <h3 class="feature-title"><span class="rect2"></span><span class="label">ファスナー仕様の特許製品</span></h3>
                 <p class="feature-body2">
@@ -133,8 +137,11 @@
             <div class="feature-number">03</div>
           </div>
           <div class="feature-box">
-            <img src="img/features3.webp" alt="" class="feature-img">
-            <div class="feature-text">
+          <picture>
+            <source srcset="img/features3.webp" media="(min-width: 500px)" type="image/webp" class="feature-img">
+            <img src="img/features3-sp.webp" alt="" class="feature-img">
+          </picture>    
+          <div class="feature-text">
               <h3 class="feature-title"><span class="rect"></span><span class="label">ひとつひとつ丁寧に</span></h3>
               <p class="feature-body">
                 裁断から縫製、ネクタイを結ぶまで、<br>全て職人の手で行っています。<br>お客様にとって大切な1本。<br>ひとつひとつ丁寧に気持ちを込めて<br class="sp-br">作っています。
@@ -289,5 +296,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
     <script src="js.js"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </body>
 </html>
