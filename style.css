@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "EBGaramond";
+  src: url("font/EBGaramond-Regular.ttf");
+}
+@font-face {
+  font-family: "ShipporiMincho";
+  src: url("font/ShipporiMincho-Medium.ttf");
+}
 :root {
   --gray1: #EFF5F9;
   --gray2: #CCCCCC;
@@ -5,15 +13,15 @@
   --black: #232323;
   --navy: #073061;
   --blue: #98A9BE;
-  --eb: "EB Garamond", serif;
-  --sm: "Shippori Mincho", serif;
+  --eb: "EBGaramond", serif;
+  --sm: "ShipporiMincho", serif;
 }
 
 body {
   font-size: 14px;
   line-height: 2;
   letter-spacing: 0.1em;
-  font-family: "Shippori Mincho", serif;
+  font-family: "ShipporiMincho", serif;
   font-weight: 500;
   color: var(--black);
   background-color: var(--gray1);
@@ -49,6 +57,7 @@ a {
 
 .eb {
   font-family: var(--eb);
+  font-weight: 400;
 }
 
 .pc-only {
@@ -201,7 +210,6 @@ header nav ul {
   top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: var(--eb);
   font-size: 24px;
 }
 header nav ul li a:hover {
@@ -280,7 +288,6 @@ header nav.panelactive .buy-content .buy-bottom .amazon img {
   position: absolute;
   top: 420px;
   right: 43px;
-  font-family: var(--eb);
   font-size: 53px;
   color: white;
   letter-spacing: 0.16em;
@@ -421,6 +428,7 @@ header nav.panelactive .buy-content .buy-bottom .amazon img {
 }
 .about .feature .feature-numbers .feature-number {
   font-family: var(--eb);
+  font-weight: 400;
   font-size: 32px;
 }
 .about .feature .feature-numbers .feature-line {
