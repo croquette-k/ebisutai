@@ -13,7 +13,7 @@
     font-size: 16px;
   }
   main {
-    top: -146px;
+    top: -155px;
   }
   .container {
     max-width: 1140px;
@@ -26,7 +26,7 @@
     display: block;
   }
   .pc-only {
-    display: block;
+    display: inline-block;
   }
   /* header------------------------------------ */
   header h1 {
@@ -102,7 +102,6 @@
   }
   /* mainvisual------------------------------------------ */
   .mainvisual {
-    height: auto;
     height: 134vh;
   }
   .mainvisual .mainvisual1 {
