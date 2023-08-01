@@ -24,38 +24,6 @@
         </svg>
       </div>
     </div>
-    <script type="text/javascript">
-      $(function(){
-
-      /* ローディング */
-          /* vivus */
-      var stroke;
-      stroke =new Vivus( "loading-anm", //SVGに指定したID
-      {
-          start: "manual",
-          type: "oneByOne",  //アニメーションのタイプ
-          duration: 70, //アニメーションの時間
-          forceRender: false, //パスが更新で再レンダリングさせない
-      },
-      function (obj) {
-      obj.el.classList.add("done"); //アニメーション後にdoneクラスを付与
-      }
-      );
-
-      $('.loading-anime').show();
-
-      stroke.play();//SVGアニメーションの実行
-
-      });
-
-
-      $(window).on('load',function(){
-      $(".loading").delay(1000).fadeOut('slow');//ローディング画面を1秒待機してからフェイドアウト
-      $(".loading-anime").delay(1000).fadeOut('slow');//ロゴを1秒待機してからフェイドアウト
-      });
-
-
-    </script>
     <header><!--------------------headerここから------------------------->
       <h1><a href="#"><img src="img/logo.webp" alt="ET"></a></h1>
       <div class="header-right">

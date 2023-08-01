@@ -19,12 +19,37 @@ $(function(){
 
     stroke.play();//SVGアニメーションの実行
 
+    gsap.registerPlugin(ScrollTrigger);
+
+
 });
-
-
+  
+  
 $(window).on('load',function(){
-    $(".loading").delay(1000).fadeOut('slow');//ローディング画面を1秒待機してからフェイドアウト
-    $(".loading-anime").delay(1000).fadeOut('slow');//ロゴを1秒待機してからフェイドアウト
+    $(".loading").fadeOut('slow');
+    $(".loading-anime").fadeOut('slow');
+
+    gsap.from(".mainvisual1", {
+        opacity: 0,
+        y: 80,
+        duration: 1.0,
+        ease: Power4.out,
+        delay: 1,
+    });
+    gsap.from(".mainvisual2", {
+        opacity: 0,
+        y: -100,
+        duration: 1.5,
+        ease: Power4.out,
+        delay: 1,
+    });
+    gsap.from(".char", {
+        y: 60,
+        ease: Power4.out,
+        stagger: 0.06,
+        delay: 2,
+    });
+
 });
 
 $(function(){
@@ -63,28 +88,7 @@ $(function(){
     });
 
     /* gsap */
-    gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from(".mainvisual1", {
-        opacity: 0,
-        y: 80,
-        duration: 1.0,
-        ease: Power4.out,
-        delay: 2.2
-    });
-    gsap.from(".mainvisual2", {
-        opacity: 0,
-        y: -100,
-        duration: 1.5,
-        ease: Power4.out,
-        delay: 2.2
-    });
-    gsap.from(".char", {
-        y: 60,
-        ease: Power4.out,
-        stagger: 0.06,
-        delay: 3,
-    });
 
     document.querySelectorAll(".fdin_up").forEach((item) => {
         gsap.from(item,{
