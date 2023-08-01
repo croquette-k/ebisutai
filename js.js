@@ -19,40 +19,30 @@ $(function(){
 
     stroke.play();//SVGアニメーションの実行
 
-    gsap.registerPlugin(ScrollTrigger);
 
-
-});
-  
-  
-$(window).on('load',function(){
-    $(".loading").fadeOut('slow');
-    $(".loading-anime").fadeOut('slow');
+    $(".loading").delay(1500).fadeOut('slow');
+    $(".loading-anime").delay(1500).fadeOut('slow');
 
     gsap.from(".mainvisual1", {
         opacity: 0,
         y: 80,
         duration: 1.0,
         ease: Power4.out,
-        delay: 1,
+        delay: 2,
     });
     gsap.from(".mainvisual2", {
         opacity: 0,
         y: -100,
         duration: 1.5,
         ease: Power4.out,
-        delay: 1,
+        delay: 2,
     });
     gsap.from(".char", {
         y: 60,
         ease: Power4.out,
         stagger: 0.06,
-        delay: 2,
+        delay: 3,
     });
-
-});
-
-$(function(){
 
     
     /* ハンバーガーメニュー */
@@ -88,6 +78,8 @@ $(function(){
     });
 
     /* gsap */
+
+    gsap.registerPlugin(ScrollTrigger);
 
 
     document.querySelectorAll(".fdin_up").forEach((item) => {
