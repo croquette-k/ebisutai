@@ -849,8 +849,12 @@ footer {
       color: var(--navy);
       a {
         margin-left: 20px;
-        i {
+        vertical-align: middle;
+        img {
           margin-right: 10px;
+          width: 30px;
+          display: inline-block;
+          vertical-align: middle;
         }
       }
     }

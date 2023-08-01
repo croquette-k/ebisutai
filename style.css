@@ -857,7 +857,11 @@ footer .footer-right .footer-sns {
 }
 footer .footer-right .footer-sns a {
   margin-left: 20px;
+  vertical-align: middle;
 }
-footer .footer-right .footer-sns a i {
+footer .footer-right .footer-sns a img {
   margin-right: 10px;
+  width: 30px;
+  display: inline-block;
+  vertical-align: middle;
 }/*# sourceMappingURL=style.css.map */
